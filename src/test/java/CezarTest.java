@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 public class CezarTest {
 
     Cezar cezar = new Cezar();
-    final String text = "Встретимся завтра утром";
+    final String text = "ВСТРЕТИМСЯ ЗАВТРА УТРОМ";
     final String shifrText = "ЛЫЬЪОЬТЦЫИ СЙЛЬЪЙ ЭЬЪШЦ";
 
     @Test

@@ -72,6 +72,30 @@ public class Cezar {
     }
 
     public String uncoding(String text, int key) {
-        return null;
+        text = text.toUpperCase();
+        char[] chars = text.toCharArray();
+
+        StringBuffer newStr = new StringBuffer();
+
+        for (char symbol: chars) {
+
+            if (symbol == ' '){
+                newStr.append(" ");
+                continue;
+            }
+
+            dict.forEach((keyMap, value) -> {
+                if (symbol == value) {
+                    if (keyMap - key > 0) {
+                        newStr.append(dict.get(keyMap - key));
+                    } else {
+                        newStr.append(dict.get(keyMap - key + dict.size()));
+                    }
+
+                }
+            });
+        }
+
+        return newStr.toString();
     }
 }
